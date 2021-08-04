@@ -1,10 +1,12 @@
 import React from "react";
 import { Link, BrowserRouter as Router } from "react-router-dom";
+import Routes from '../Routes'
+
 export default function Navigation() {
   return (
+          <Router>
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container">
-          <Router>
         <Link className="navbar-brand" to="/">
           ZaHiD aLi BhAtTi
         </Link>
@@ -45,9 +47,10 @@ export default function Navigation() {
          
         </div>
         <Link className="btn btn-outline-light" to="/users/add">Add User</Link>
-        </Router >
        
       </div>
     </nav>
+        <Routes />
+        </Router >
   );
 }

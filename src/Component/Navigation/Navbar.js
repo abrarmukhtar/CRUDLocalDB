@@ -10,6 +10,7 @@ export default function NavBar() {
   const classes = useStyles();
 
   return (
+          <Router>
     <div className={classes.root}>
       <Grid container spacing={1}>
         <Grid item xs={12} sm={6}>
@@ -22,32 +23,31 @@ export default function NavBar() {
           </AppBar>
         </Grid>
         <Grid item xs={12} sm={6} className={classes.navBar}>
-          <Router>
             <ul className={classes.menuLink}>
               <li className={classes.abc}>
-                <Link exact to="/">
+                <Link  to="/">
                   Home
                 </Link>
               </li>
               <li>
-                <Link exact to="/portfolio">
+                <Link  to="/portfolio">
                   PortFolio
                 </Link>
               </li>
               <li>
-                <Link exact to="/aboutUs">
+                <Link  to="/aboutUs">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link exact to="/contactUs">
+                <Link  to="/contactUs">
                   Contact Us
                 </Link>
               </li>
             </ul>
-          </Router>
         </Grid>
       </Grid>
     </div>
+          </Router>
   );
 }
